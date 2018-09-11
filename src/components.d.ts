@@ -12,10 +12,10 @@ import '@stencil/core';
 export namespace Components {
 
   interface AaSvg {
-    'name': string;
+    'aa': string;
   }
   interface AaSvgAttributes extends StencilHTMLAttributes {
-    'name'?: string;
+    'aa'?: string;
   }
 }
 
