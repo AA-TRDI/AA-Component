@@ -11,6 +11,13 @@ import '@stencil/core';
 
 export namespace Components {
 
+  interface AaImg {
+    'aa': string;
+  }
+  interface AaImgAttributes extends StencilHTMLAttributes {
+    'aa'?: string;
+  }
+
   interface AaSvg {
     'aa': string;
   }
@@ -21,13 +28,21 @@ export namespace Components {
 
 declare global {
   interface StencilElementInterfaces {
+    'AaImg': Components.AaImg;
     'AaSvg': Components.AaSvg;
   }
 
   interface StencilIntrinsicElements {
+    'aa-img': Components.AaImgAttributes;
     'aa-svg': Components.AaSvgAttributes;
   }
 
+
+  interface HTMLAaImgElement extends Components.AaImg, HTMLStencilElement {}
+  var HTMLAaImgElement: {
+    prototype: HTMLAaImgElement;
+    new (): HTMLAaImgElement;
+  };
 
   interface HTMLAaSvgElement extends Components.AaSvg, HTMLStencilElement {}
   var HTMLAaSvgElement: {
@@ -36,10 +51,12 @@ declare global {
   };
 
   interface HTMLElementTagNameMap {
+    'aa-img': HTMLAaImgElement
     'aa-svg': HTMLAaSvgElement
   }
 
   interface ElementTagNameMap {
+    'aa-img': HTMLAaImgElement;
     'aa-svg': HTMLAaSvgElement;
   }
 
