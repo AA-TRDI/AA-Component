@@ -61,7 +61,7 @@ export class AAImgComponent {
     let scale = 1;
     canvas.width = svg[1] * scale;
     canvas.height = svg[2] * scale;
-    ctx.fillStyle = 'white';
+    ctx.fillStyle = 'transparent';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     let image = new Image();
