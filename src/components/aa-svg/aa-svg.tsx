@@ -9,10 +9,10 @@ export class AASvgComponent {
   @Prop() aa: string;
 
   get_tex_width(txt, font) {
-    this.element = document.createElement('canvas');
-    this.context = this.element.getContext('2d');
-    this.context.font = font;
-    return this.context.measureText(txt).width;
+    let element = document.createElement('canvas');
+    let context = element.getContext('2d');
+    context.font = font;
+    return context.measureText(txt).width;
   }
   render() {
     const data = this.aa.split(/\\n|\r\n|\r|\n/);
