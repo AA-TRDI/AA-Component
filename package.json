@@ -1,6 +1,6 @@
 {
   "name": "aa-ui",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Description This WebComponent is for easy use of Ascii Art.",
   "main": "dist/aa-ui.js",
   "types": "dist/types/components.d.ts",
